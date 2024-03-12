@@ -4,9 +4,10 @@
 //C: Seja A=LU a decomposição LU de A. 
 //Então C(i,j)=L(i,j) para i>j e C(i,j)=U(i,j) para j>=i. 
 ////////////////////////////////////////////////////////////////////////// 
-function [x, C]=Gaussian_Elimination_2(A, b) 
+function [x, P, C]=Gaussian_Elimination_2(A, b) 
 C=[A,b];   
 [n]=size(C,1); 
+P=eye(n,n);
  
 for j=1:(n-1) 
     //O pivô está na posição (j,j)
@@ -17,6 +18,7 @@ for j=1:(n-1)
         k = j + find(vec,1);
         
         C([j k],:) = C([k j],:);
+        P([j k],:) = P([k j],:);
     end
     
     for i=(j+1):n 
