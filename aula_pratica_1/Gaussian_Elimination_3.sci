@@ -13,6 +13,7 @@ for j=1:(n-1)
     // Verifica se o pivô é 0
     if C(j,j) == 0 then
         // Se for então verifica outras linhas para substituir com um pivô diferente de 0
+       col = C(j+1:n,j);
        
        
     end

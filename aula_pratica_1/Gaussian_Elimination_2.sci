@@ -13,15 +13,10 @@ for j=1:(n-1)
     // Verifica se o pivô é 0
     if C(j,j) == 0 then
         // Se for então verifica outras linhas para substituir com um pivô diferente de 0
-        for i=(j+1):n
-            if C(i,j) <> 0 then
-                // Realiza a troca entre as linhas i e j
-                line = C(i, :);
-                C(i, :) = C(j, :);
-                C(j, :) = line;
-                break;
-            end
-        end
+        vec = C(j+1:n, j);
+        k = j + find(vec,1);
+        
+        C([j k],:) = C([k j],:);
     end
     
     for i=(j+1):n 
