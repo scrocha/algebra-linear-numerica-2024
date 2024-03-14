@@ -1,10 +1,12 @@
-////////////////////////////////////////////////////////////////////////// 
+//////////////////////////////////////////////////////////////////////////
+//Variáveis de saída: 
+//X: Matrix das soluções AX=B, onde a coluna i de X resolve o sistema Ax(i)=b(i)
 ////////////////////////////////////////////////////////////////////////// 
 function [X]=Resolve_com_LU(C, P, B)
-//D=[C,B];
 [n, m]=size(B);
 X=zeros(n, m);
 Y=zeros(n, m);
+// Permutaremos B se necessário para resolver PAX=PB
 B=P*B;
 
 // Começaremos resolvendo o Sistema Ly=b sendo que Ux=y, em que
@@ -12,8 +14,9 @@ B=P*B;
 // X a matriz onde as colunas resolvem o segundo sistema.
 // Sendo B a matriz com os b's a serem resolvidos na coluna.
 
-// Como a matriz L possui 1's na diagonal, sabemos que a primeira linha
-// de Y será igual a primeira linha de B.
+// Como a matriz L possui 1's na diagonal,
+// sabemos que a primeira linha de Y será
+// igual a primeira linha de B.
 
 Y(1,:)=B(1,:);
 
@@ -22,15 +25,17 @@ Y(1,:)=B(1,:);
 // pelos fatores de L.
 
 for i=2:n
-    Y(i,:)=B(i,:)-C(i,1:i-1)*Y(1:i-1,i);
+    Y(i,:)=B(i,:)-C(i,1:i-1)*Y(1:i-1,:);
 end
 
-// Agora resolveremos o sistema Ux=y
+// Agora resolveremos o sistema Ux=y. Analogamente a
+// parte anterior, sabemos que a última linha de X
+// é igual a última linha de Y dividida pelo último pivô de C.
 
 X(n,:)=Y(n,:)/C(n,n);
 
 for i=n-1:-1:1
-    X(i,:)=(Y(i,:)-C(i,i+1:n)*X(i+1:n,i))/C(i,i);  
+    X(i,:)=(Y(i,:)-C(i,i+1:n)*X(i+1:n,:))/C(i,i);  
 end
 
 endfunction

@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////// 
 //Variáveis de saída: 
 //x: solução do sistema Ax=b (assumimos que tal solução existe). 
+//P: permutações necessárias para resolver o sistema PAx=Pb caso exista algum pivô nulo
 //C: Seja A=LU a decomposição LU de A. 
 //Então C(i,j)=L(i,j) para i>j e C(i,j)=U(i,j) para j>=i. 
 ////////////////////////////////////////////////////////////////////////// 
