@@ -1,3 +1,5 @@
+clear
+
 exec("Gaussian_Elimi.sci")
 exec("Resolve_com_LU.sci")
 

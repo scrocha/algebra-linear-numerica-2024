@@ -1,3 +1,5 @@
+clear
+
 exec("Gaussian_Elimination_4.sci")
 
 A2=[0  10-20  1;  10-20  1  1;  1  2  1];
