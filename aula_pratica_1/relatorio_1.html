@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Relat&oacute;rio da Aula Pr&aacute;tica 1 de ALN</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="relatório-da-aula-prática-1-de-aln">Relatório da Aula Prática 1 de ALN</h1>
+<h4 id="aluno-sillas-rocha-da-costa">Aluno: Sillas Rocha da Costa</h4>
+<hr>
+<h2 id="primeira-questão">Primeira Questão</h2>
+<p>Ao implementar o algoritmo base fornecido no <a href="./AULA%20PR%C3%81TICA%201.pdf">arquivo da aula prática</a>, no arquivo <a href="./Gaussian_Elimination_1.sci"><code>Gaussian_Elimination_1.sci</code></a> foi possível observar os resultados esperados com testes simples, tanto as matrizes A e vetores b de entrada podem ser observados no arquivo da <a href="./quest_1.sci">questão 1 (quest_1.sci)</a>, a seguir estão as saídas observadas:</p>
+<ul>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_1_1.png" alt=""></li>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_1_2.png" alt=""></li>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_1_3.png" alt=""></li>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_1_4.png" alt=""></li>
+</ul>
+<hr>
+<h2 id="segunda-questão">Segunda Questão</h2>
+<p>Na segunda questão foi possível verificar que a implementação ainda não estava perfeita, pois apresentava problemas na decomposição com pivôs zero, possível verificar no arquivo da <a href="./quest_2.sci">questão 2 (quest_2.sci)</a>:</p>
+<ul>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_2.png" alt=""></li>
+</ul>
+<hr>
+<h2 id="terceira-questão">Terceira Questão</h2>
+<p>A terceira, no arquivo <a href="./quest_3.sci">questão 3 (quest_3.sci)</a>, ao aprimorar o algoritmo no arquivo <a href="./Gaussian_Elimination_2.sci"><code>Gaussian_Elimination_2.sci</code></a> com a seguinte adição no algoritmo:</p>
+<pre><code>for j=1:(n-1)
+
+    //O pivô está na posição (j,j)
+    // Verifica se o pivô é 0
+
+    if C(j,j) == 0 then
+        // Se for então verifica outras linhas para substituir com um pivô diferente de 0
+
+        vec = C(j+1:n, j);
+        k = j + find(vec,1);
+
+        C([j k],:) = C([k j],:);
+        P([j k],:) = P([k j],:);
+    end
+</code></pre>
+<p>Obtemos estes resultados:</p>
+<ul>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_3_1.png" alt=""></li>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_3_2.png" alt=""></li>
+</ul>
+<hr>
+<h2 id="quarta-questão">Quarta Questão</h2>
+<p>Já na <a href="./quest_4.sci">questão 4 (quest_4.sci)</a>, ao aprimorar o  algoritmo, chemos na <a href="./Gaussian_Elimination_3.sci"><code>Gaussian_Elimination_3</code></a> com as seguintes alterações:</p>
+<pre><code>for j=1:(n-1) 
+    //O pivô está na posição (j,j)
+    // Verifica se o pivô é 0
+    if C(j,j) == 0 then
+        // Se for então verifica outras linhas para substituir com um pivô diferente de 0
+       [num, index] = max(abs(C(j+1:n,j)));
+       k = j + index
+       
+        C([j k],:) = C([k j],:);
+        P([j k],:) = P([k j],:);
+    end
+</code></pre>
+<p>E chegamos nos resultados:</p>
+<ul>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_4_2.png" alt=""></li>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_4_3.png" alt=""></li>
+</ul>
+<hr>
+<h2 id="quinta-questão">Quinta Questão</h2>
+<p>Na <a href="./quest_5.sci">questão 5 (quest_5.sci)</a> chegamos na implementação final da Eliminação Gaussiana, a <a href="./Gaussian_Elimination_4.sci"><code>Gaussian_Elimination_4</code></a>, onde a substituição pelo maior pivô é o primeiro passo mesmo que o pivô seja não nulo:</p>
+<pre><code>for j=1:(n-1) 
+    //O pivô está na posição (j,j)
+    // Verifica se o pivô é 0
+    
+     [num, index] = max(abs(C(j:n,j)));
+     k = j + index - 1;
+       
+     C([j k],:) = C([k j],:);
+     P([j k],:) = P([k j],:);
+</code></pre>
+<p>Para obter os resultados seguintes:</p>
+<ul>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_5_2.png" alt=""></li>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_5_3.png" alt=""></li>
+</ul>
+<hr>
+<h2 id="sexta-questão">Sexta Questão</h2>
+<p>Por fim, na <a href="./quest_6.sci">questão 6 (quest_6.sci)</a>, foi necessário implementar a função <a href="./Resolve_com_LU.sci">Resolve_com_LU</a> sem uma função de base, entretando, a implementação acaba sendo bem simples e se resumindo a apenas:</p>
+<pre><code>Y(1,:)=B(1,:);
+for i=2:n
+    Y(i,:)=B(i,:)-C(i,1:i-1)*Y(1:i-1,:);
+end
+
+X(n,:)=Y(n,:)/C(n,n);
+for i=n-1:-1:1
+    X(i,:)=(Y(i,:)-C(i,i+1:n)*X(i+1:n,:))/C(i,i);  
+end
+</code></pre>
+<p>Assim, com a implementação preparada, podemos verificar ela em ação:</p>
+<ul>
+<li><img src="file:///c:\Users\silla\Desktop\Trabalhos\ALN_2024.1\aula_pratica_1\exemplos\quest_6.png" alt=""></li>
+</ul>
+
+            
+            
+        </body>
+        </html>
