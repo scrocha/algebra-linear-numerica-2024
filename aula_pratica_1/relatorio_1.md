@@ -48,7 +48,7 @@ Obtemos estes resultados:
 ---
 ## Quarta Questão
 
-Já na [questão 4 (quest_4.sci)](./quest_4.sci), ao aprimorar o  algoritmo, chemos na [`Gaussian_Elimination_3`](./Gaussian_Elimination_3.sci) com as seguintes alterações:
+Já na [questão 4 (quest_4.sci)](./quest_4.sci), ao aprimorar o  algoritmo para que ele substitua pelo pivô de maior valor, chemos na [`Gaussian_Elimination_3`](./Gaussian_Elimination_3.sci) com as seguintes alterações:
 
 ```
 for j=1:(n-1) 
