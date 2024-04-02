@@ -1,4 +1,4 @@
-function [x_k2, diff, k, r] = jacobi(A, b, x_0, E, M, norm)
+function [x_k2, diff, k, r] = jacobi(A, b, x_0, E, M, norma)
     n = size(A, 1);
     // Inicializa a iteração anterior como a estimativa inicial
     x_k1 = x_0;
@@ -9,12 +9,12 @@ function [x_k2, diff, k, r] = jacobi(A, b, x_0, E, M, norm)
     // Calcula a próxima iteração
     x_k2 = -D_inv * LU * x_k1 + D_inv * b;
     // Calcula a diferença entre a iteração atual e a anterior
-    diff = norm(x_k2 - x_k1, norm);
+    diff = norm(x_k2 - x_k1, norma);
     // Esta foi a primeira iteração
     k=1;
 
     // Loop que continua até que alguma das duas condições seja cunmprida
-    while (k <= M & diff >= E) then
+    while (k < M & diff > E) do
         // Atualiza a iteração anterior para a iteração atual
         x_k1 = x_k2;
         
@@ -24,9 +24,9 @@ function [x_k2, diff, k, r] = jacobi(A, b, x_0, E, M, norm)
         // Incrementa o contador de iterações
         k = k + 1;
         // Calcula a diferença entre as iterações
-        diff = norm(x_k2 - x_k1, norm);
+        diff = norm(x_k2 - x_k1, norma);
     end
 
     // Calcula a norma do resíduo
-    r = norm(b - A*x_k2, norm);
+    r = norm(b - A*x_k2, norma);
 endfunction
