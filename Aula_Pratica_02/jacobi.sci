@@ -1,4 +1,4 @@
-function [x_k2, diff, k, r] = Algoritmo_Jacobi(A, b, x_0, E, M, norm)
+function [x_k2, diff, k, r] = jacobi(A, b, x_0, E, M, norm)
     n = size(A, 1);
     // Inicializa a iteração anterior como a estimativa inicial
     x_k1 = x_0;
