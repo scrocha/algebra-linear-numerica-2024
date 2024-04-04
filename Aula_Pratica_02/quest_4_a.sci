@@ -1,4 +1,6 @@
-exec("jacobi.sci")
+clear;
+
+exec("jacobi.sci");
 
 A = [2 -1 1; 2 2 2; -1 -1 2];
 b = [-1; 4; -5];

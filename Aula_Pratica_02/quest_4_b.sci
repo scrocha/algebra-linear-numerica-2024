@@ -1,5 +1,7 @@
-exec("gauss_seidel_inv.sci")
-exec("gauss_seidel_lin.sci")
+clear;
+
+exec("gauss_seidel_inv.sci");
+exec("gauss_seidel_lin.sci");
 
 A = [2 -1 1; 2 2 2; -1 -1 2];
 b = [-1; 4; -5];

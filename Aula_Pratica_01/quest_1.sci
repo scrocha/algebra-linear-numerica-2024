@@ -1,6 +1,6 @@
-clear
+clear;
 
-exec("Gaussian_Elimination_1.sci")
+exec("Gaussian_Elimination_1.sci");
 
 A_1 = [3 -2; 9 -4];
 b_1 = [1; 7];
