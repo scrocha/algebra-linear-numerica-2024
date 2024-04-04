@@ -1,8 +1,8 @@
 clear;
 
-exec("jacobi.sci");
-exec("gauss_seidel_inv.sci");
-exec("gauss_seidel_lin.sci");
+exec("./funcs/jacobi.sci");
+exec("./funcs/gauss_seidel_inv.sci");
+exec("./funcs/gauss_seidel_lin.sci");
 
 A = [1 -4 2; 0 2 4; 6 -1 -2];
 b = [2; 1; 1];

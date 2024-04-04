@@ -1,7 +1,7 @@
 clear;
 
-exec("Gaussian_Elimi.sci");
-exec("Resolve_com_LU.sci");
+exec("./funcs/Gaussian_Elimi.sci");
+exec("./funcs/Resolve_com_LU.sci");
 
 A1=[1 -2 5 0; 2 -4 1 3; -1 1 0 2; 0 3 3 1];
 B1=[2  4 -1  5  ;0  1  0  3;  2  2 -1  1;  0  1  1  5];

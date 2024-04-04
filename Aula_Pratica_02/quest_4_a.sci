@@ -1,6 +1,6 @@
 clear;
 
-exec("jacobi.sci");
+exec("./funcs/jacobi.sci");
 
 A = [2 -1 1; 2 2 2; -1 -1 2];
 b = [-1; 4; -5];

@@ -5,7 +5,7 @@
 ---
 ## Primeira Questão
 
-Ao implementar o algoritmo base fornecido no [arquivo da aula prática](./AULA%20PRÁTICA%201.pdf), no arquivo [`Gaussian_Elimination_1.sci`](./Gaussian_Elimination_1.sci) foi possível observar os resultados esperados com testes simples, tanto as matrizes A e vetores b de entrada podem ser observados no arquivo da [questão 1 (quest_1.sci)](./quest_1.sci), a seguir estão as saídas observadas:
+Ao implementar o algoritmo base fornecido no [arquivo da aula prática](./AULA%20PRÁTICA%201.pdf), no arquivo [`Gaussian_Elimination_1.sci`](./funcs/Gaussian_Elimination_1.sci) foi possível observar os resultados esperados com testes simples, tanto as matrizes A e vetores b de entrada podem ser observados no arquivo da [questão 1 (quest_1.sci)](./quest_1.sci), a seguir estão as saídas observadas:
 
 - ![](./exemplos/quest_1_1.png)
 - ![](./exemplos/quest_1_2.png)
@@ -22,9 +22,9 @@ Na segunda questão foi possível verificar que a implementação ainda não est
 ---
 ## Terceira Questão
 
-A terceira, no arquivo [questão 3 (quest_3.sci)](./quest_3.sci), ao aprimorar o algoritmo no arquivo [`Gaussian_Elimination_2.sci`](./Gaussian_Elimination_2.sci) com a seguinte adição no algoritmo:
+A terceira, no arquivo [questão 3 (quest_3.sci)](./quest_3.sci), ao aprimorar o algoritmo no arquivo [`Gaussian_Elimination_2.sci`](./funcs/Gaussian_Elimination_2.sci) com a seguinte adição no algoritmo:
 
-```
+```sci
 for j=1:(n-1)
 
     //O pivô está na posição (j,j)
@@ -48,9 +48,9 @@ Obtemos estes resultados:
 ---
 ## Quarta Questão
 
-Já na [questão 4 (quest_4.sci)](./quest_4.sci), ao aprimorar o  algoritmo para que ele substitua pelo pivô de maior valor, chemos na [`Gaussian_Elimination_3`](./Gaussian_Elimination_3.sci) com as seguintes alterações:
+Já na [questão 4 (quest_4.sci)](./quest_4.sci), ao aprimorar o  algoritmo para que ele substitua pelo pivô de maior valor, chemos na [`Gaussian_Elimination_3`](./funcs/Gaussian_Elimination_3.sci) com as seguintes alterações:
 
-```
+```sci
 for j=1:(n-1) 
     //O pivô está na posição (j,j)
     // Verifica se o pivô é 0
@@ -72,9 +72,9 @@ E chegamos nos resultados:
 ---
 ## Quinta Questão
 
-Na [questão 5 (quest_5.sci)](./quest_5.sci) chegamos na implementação final da Eliminação Gaussiana, a [`Gaussian_Elimination_4`](./Gaussian_Elimination_4.sci), onde a substituição pelo maior pivô é o primeiro passo mesmo que o pivô seja não nulo:
+Na [questão 5 (quest_5.sci)](./quest_5.sci) chegamos na implementação final da Eliminação Gaussiana, a [`Gaussian_Elimination_4`](./funcs/Gaussian_Elimination_4.sci), onde a substituição pelo maior pivô é o primeiro passo mesmo que o pivô seja não nulo:
 
-```
+```sci
 for j=1:(n-1) 
     //O pivô está na posição (j,j)
     // Verifica se o pivô é 0
@@ -94,9 +94,9 @@ Para obter os resultados seguintes:
 ---
 ## Sexta Questão
 
-Por fim, na [questão 6 (quest_6.sci)](./quest_6.sci), foi necessário implementar a função [Resolve_com_LU](./Resolve_com_LU.sci) sem uma função de base, entretando, a implementação acaba sendo bem simples e se resumindo a apenas:
+Por fim, na [questão 6 (quest_6.sci)](./quest_6.sci), foi necessário implementar a função [Resolve_com_LU](./funcs/Resolve_com_LU.sci) sem uma função de base, entretando, a implementação acaba sendo bem simples e se resumindo a apenas:
 
-```
+```sci
 Y(1,:)=B(1,:);
 for i=2:n
     Y(i,:)=B(i,:)-C(i,1:i-1)*Y(1:i-1,:);

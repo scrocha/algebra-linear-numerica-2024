@@ -1,8 +1,8 @@
 clear;
 
-exec("gauss_seidel_inv.sci");
-exec("gauss_seidel_lin.sci");
-exec("gera_mat.sci");
+exec("./funcs/gauss_seidel_inv.sci");
+exec("./funcs/gauss_seidel_lin.sci");
+exec("./funcs/gera_mat.sci");
 
 [A_10, b_10] = gera_mat(10);
 [A_100, b_100] = gera_mat(100);
