@@ -18,3 +18,4 @@ norma = 2;
 [x_gs_inv, diff_gs_inv, k_gs_inv, r_gs_inv] = gauss_seidel_inv(PA, Pb, x_0, E, M, norma);
 [x_gs_lin, diff_gs_lin, k_gs_lin, r_gs_lin] = gauss_seidel_lin(PA, Pb, x_0, E, M, norma);
 
+disp(k_jacobi, k_gs_inv, k_gs_lin)

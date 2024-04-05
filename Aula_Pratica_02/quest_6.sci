@@ -16,7 +16,6 @@ norma = 2;
 tic();[x_gs_inv_1, diff_gs_inv_1, k_gs_inv_1, r_gs_inv_1] = gauss_seidel_inv(A_10, b_10, zeros(b_10), E, M, norma);inv_10=toc();
 tic();[x_gs_lin_1, diff_gs_lin_1, k_gs_lin_1, r_gs_lin_1] = gauss_seidel_lin(A_10, b_10, zeros(b_10), E, M, norma);lin_10=toc();
 
-
 tic();[x_gs_inv_2, diff_gs_inv_2, k_gs_inv_2, r_gs_inv_2] = gauss_seidel_inv(A_100, b_100, zeros(b_100), E, M, norma);inv_100=toc();
 tic();[x_gs_lin_2, diff_gs_lin_2, k_gs_lin_2, r_gs_lin_2] = gauss_seidel_lin(A_100, b_100, zeros(b_100), E, M, norma);lin_100=toc();
 
@@ -26,3 +25,7 @@ tic();[x_gs_lin_3, diff_gs_lin_3, k_gs_lin_3, r_gs_lin_3] = gauss_seidel_lin(A_1
 tic();[x_gs_inv_4, diff_gs_inv_4, k_gs_inv_4, r_gs_inv_4] = gauss_seidel_inv(A_2000, b_2000, zeros(b_2000), E, M, norma);inv_2000=toc();
 tic();[x_gs_lin_4, diff_gs_lin_4, k_gs_lin_4, r_gs_lin_4] = gauss_seidel_lin(A_2000, b_2000, zeros(b_2000), E, M, norma);lin_2000=toc();
 
+disp("10X10 por iversa:", inv_10, "10X10 por linear:", lin_10)
+disp("100X100 por iversa:", inv_100, "100X100 por linear:", lin_100)
+disp("1000X1000 por iversa:", inv_1000, "1000X1000 por linear:", lin_1000)
+disp("2000X2000 por iversa:", inv_2000, "2000X2000 por linear:", lin_2000)
