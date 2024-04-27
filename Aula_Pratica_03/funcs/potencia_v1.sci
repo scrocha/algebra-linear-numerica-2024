@@ -17,10 +17,10 @@ function [lambda, x1, k, n_erro] = metodo_potencia_v1(A, x0, epsilon, M)
         x1 = A*x0;
         k=k+1;
     end
-    
+
     x1 = x1/lambda;
     if (lambda < 0) then
-        x1 = -x1
+        x1 = -x1;
     end
 
 endfunction
