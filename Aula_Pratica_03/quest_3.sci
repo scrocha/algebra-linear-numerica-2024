@@ -28,4 +28,3 @@ disp("Iterações e tempo do método v1 e v2 para a matriz A1: ", [t11 k11; t21 
 disp("Iterações e tempo do método v1 e v2 para a matriz A2: ", [t12 k12; t22 k22])
 disp("Iterações e tempo do método v1 e v2 para a matriz A3: ", [t13 k13; t23 k23])
 disp("Iterações e tempo do método v1 e v2 para a matriz A4: ", [t14 k14; t24 k24])
-

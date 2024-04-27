@@ -49,11 +49,11 @@ function [lambda1, x1, k, n_erro] = metodo_potencia_inv(A, x0, epsilon, alfa, M)
     A_alfa = A - alfa*eye(A);
 
     while (k <= M && n_erro >= epsilon) then
-        x1 = Gaussian_Elimination_4(A, x0);
+        x1 = Gaussian_Elimination_4(A_alfa, x0);
         x1 = x1/norm(x1, 2);
-        lambda = x1'*A*x1;
+        lambda1 = x1'*A*x1;
         
-        if (x1'x0 < 0) then
+        if (x1'*x0 < 0) then
             x1 = -x1;
         end
 
@@ -61,7 +61,5 @@ function [lambda1, x1, k, n_erro] = metodo_potencia_inv(A, x0, epsilon, alfa, M)
         x0 = x1;
         k = k+1;
     end
-
-    lambda1 = 1/lambda;
 
 endfunction
