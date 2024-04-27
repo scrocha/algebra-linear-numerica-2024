@@ -62,4 +62,6 @@ function [lambda1, x1, k, n_erro] = metodo_potencia_inv(A, x0, epsilon, alfa, M)
         k = k+1;
     end
 
+    lambda1 = 1/lambda;
+
 endfunction
