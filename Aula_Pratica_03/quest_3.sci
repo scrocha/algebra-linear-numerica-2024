@@ -8,9 +8,9 @@ A2 = [2 -1 5; -1 -3 2; 5 2 -4]; // Matriz simétrica com autovalor dominante neg
 A3 = [1 5 9; 5 3 8; 9 8 7]; // Matriz num mágicos
 A4 = [4 2 1 3; 2 5 3 2; 1 3 6 1; 3 2 1 7]; // Matriz num mágicos
 
-x0_2 = ones(2, 1);
-x0_3 = ones(3, 1);
-x0_4 = ones(4, 1);
+x0_2 = rand(2, 1);
+x0_3 = rand(3, 1);
+x0_4 = rand(4, 1);
 epsilon = 1e-8;
 M = 100;
 
@@ -24,7 +24,11 @@ tic();[lambda22, x22, k22, n_erro22] = metodo_potencia_v2(A2, x0_3, epsilon, M);
 tic();[lambda23, x23, k23, n_erro23] = metodo_potencia_v2(A3, x0_3, epsilon, M);t23=toc();
 tic();[lambda24, x24, k24, n_erro24] = metodo_potencia_v2(A4, x0_4, epsilon, M);t24=toc();
 
-disp("Iterações e tempo do método v1 e v2 para a matriz A1: ", [t11 k11; t21 k21])
-disp("Iterações e tempo do método v1 e v2 para a matriz A2: ", [t12 k12; t22 k22])
-disp("Iterações e tempo do método v1 e v2 para a matriz A3: ", [t13 k13; t23 k23])
-disp("Iterações e tempo do método v1 e v2 para a matriz A4: ", [t14 k14; t24 k24])
+disp("Matriz A1:", A1)
+disp("Iterações, tempo e autovalores do método v1 e v2 para a matriz A1: ", [t11 k11 lambda11; t21 k21 lambda21;])
+disp("Matriz A2:", A2)
+disp("Iterações, tempo e autovalores do método v1 e v2 para a matriz A2: ", [t12 k12 lambda12; t22 k22 lambda22])
+disp("Matriz A3:", A3)
+disp("Iterações, tempo e autovalores do método v1 e v2 para a matriz A3: ", [t13 k13 lambda13; t23 k23 lambda23])
+disp("Matriz A4:", A4)
+disp("Iterações, tempo e autovalores do método v1 e v2 para a matriz A4: ", [t14 k14 lambda14; t24 k24 lambda24])
