@@ -12,7 +12,7 @@ x0_2 = ones(2, 1);
 x0_3 = ones(3, 1);
 x0_4 = ones(4, 1);
 epsilon = 1e-8;
-M = 1000;
+M = 100;
 
 tic();[lambda11, x11, k11, n_erro11] = metodo_potencia_v1(A1, x0_2, epsilon, M);t11=toc();
 tic();[lambda12, x12, k12, n_erro12] = metodo_potencia_v1(A2, x0_3, epsilon, M);t12=toc();
