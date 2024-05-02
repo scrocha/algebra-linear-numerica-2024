@@ -14,7 +14,7 @@ alfa22 = B(2,2);
 alfa23 = B(3,3);
 
 C_temp = rand(3,3);
-C = C_temp'*C_temp;
+C = C_temp'*C_temp + 2*eye(3,3);
 alfa31 = C(1,1);
 alfa32 = C(2,2);
 alfa33 = C(3,3);

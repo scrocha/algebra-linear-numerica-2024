@@ -15,7 +15,7 @@ function [lambda, x1, k, n_erro] = metodo_potencia_v1(A, x0, epsilon, M)
         n_erro = norm(x1 - x0, %inf);
         x0 = x1;
         x1 = A*x0;
-        k=k+1;
+        k = k+1;
     end
 
     x1 = x1/lambda;

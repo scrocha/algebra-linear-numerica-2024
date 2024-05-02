@@ -3,7 +3,7 @@ clear;
 exec("./funcs/potencia_v1.sci");
 exec("./funcs/potencia_v2.sci");
 exec("./funcs/gera_mat.sci");
-exec("./funcs/acha_lambdas.sci")
+exec("./funcs/acha_lambdas.sci");
 
 [A1, x01] = gera_mat(3);
 [A2, x02] = gera_mat(20);
@@ -39,7 +39,7 @@ tic();
 [lambda24, x24, k24, n_erro24] = metodo_potencia_v2(A4, x04, epsilon, M);
 tempo24 = toc();
 
-disp("Tempos dos métodos da versão 1 e 2 para as geradas matrizes aleatoriamente:", [tempo11, tempo21; tempo12, tempo22; tempo13, tempo23; tempo14, tempo24]);
+disp("Tempos dos métodos da potência versão 1 e 2 para as geradas matrizes aleatoriamente", "de ordens 3, 20, 50 e 1000, primeira coluna a v1, segunda coluna a v2", "e terceira a diferença, cada linha respectivamente a uma orden:", [tempo11, tempo21, tempo11-tempo21; tempo12, tempo22, tempo12-tempo22; tempo13, tempo23, tempo13-tempo23; tempo14, tempo24, tempo14-tempo24]);
 
 [B1, _] = gera_mat_sim(2);
 [B2, _] = gera_mat_sim(3);
