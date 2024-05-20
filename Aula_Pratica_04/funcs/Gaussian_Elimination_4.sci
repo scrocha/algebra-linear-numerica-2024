@@ -5,7 +5,7 @@
 //C: Seja A=LU a decomposição LU de A. 
 //Então C(i,j)=L(i,j) para i>j e C(i,j)=U(i,j) para j>=i. 
 ////////////////////////////////////////////////////////////////////////// 
-function [x, P, C]=Gaussian_Elimination_4(A, b) 
+function [x, P, C]=Gaussian_Elimination_4(A, b)
 C=[A,b];   
 [n]=size(C,1); 
 P=eye(n,n);

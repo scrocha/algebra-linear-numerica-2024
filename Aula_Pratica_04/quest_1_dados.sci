@@ -1,3 +1,7 @@
+clear;
+
+exec("./funcs/Gaussian_Elimination_4.sci");
+
 dados = [
     1899 100 100 100;
     1900 101 105 107;
@@ -24,3 +28,19 @@ dados = [
     1921 179 146 417;
     1922 240 161 431
 ];
+
+P = dados(:,2);
+L = dados(:,3);
+K = dados(:,4);
+
+A = zeros(size(P, 1), 1);
+A(:, 1) = log(L) - log(K);
+A(:, 2) = ones(size(A, 1), 1);
+
+b = log(P) - log(K);
+
+[x, per, C] = Gaussian_Elimination_4(A'*A, A'*b);
+
+alpha = x(1);
+
+beta = exp(x(2));
