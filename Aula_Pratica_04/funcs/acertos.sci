@@ -1,3 +1,5 @@
+exec("./funcs/Gaussian_Elimination_4.sci");
+
 function [num_acertos, porcentagem_acertos] = acertos(y_pred, y_real, corte)
     n = size(y_pred, 1);
     num_acertos = 0;
@@ -24,3 +26,13 @@ function [num_acertos, porcentagem_acertos] = acertos(y_pred, y_real, corte)
 
 endfunction
 
+
+function [porcentagem_acertos] = predict(A_data_train, y_train, A_data_test, y_test)
+        
+    [x, per, C] = Gaussian_Elimination_4(A_data_train'*A_data_train, A_data_train'*y_train);
+
+    [num_acertos, porcentagem_acertos] = acertos(A_data_test*x, y_test, 0);
+
+    disp("Número de acertos: " + string(num_acertos) + " e porcentagem: " + string(porcentagem_acertos));
+
+endfunction
