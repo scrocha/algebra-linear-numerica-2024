@@ -2,9 +2,12 @@ clear;
 exec("./funcs/qr_GS.sci");
 exec("./funcs/qr_GSM.sci");
 exec("./funcs/qr_GSP.sci");
+exec("./funcs/qr_Housev1.sci");
+exec("./funcs/qr_Housev2.sci");
+exec("./funcs/constroi_Q_House.sci");
 
 A1 = rand(3, 3);
-A2 = rand(3, 5);
+A2 = testmatrix(‘magi’,4);
 A3 = rand(4, 7);
 A4 = rand(6, 4);
 
@@ -17,7 +20,7 @@ disp("Matriz 1 (3x3):", A1);
 disp("Diferença entre a ortogonal e a identidade:", Q1'*Q1 - eye(3, 3));
 disp("Acurácia da decomposição QR:", Q1*R1 - A1);
 
-disp("Matriz 2 (3x5):", A2);
+disp("Matriz 2 (4x4) 'Magi':", A2);
 disp("Diferença entre a ortogonal e a identidade:", Q2'*Q2 - eye(5, 5));
 disp("Acurácia da decomposição QR:", Q2*R2 - A2);
 
@@ -39,7 +42,7 @@ disp("Matriz 1 (3x3):", A1);
 disp("Diferença entre a ortogonal e a identidade:", Q1'*Q1 - eye(3, 3));
 disp("Acurácia da decomposição QR:", Q1*R1 - A1);
 
-disp("Matriz 2 (3x5):", A2);
+disp("Matriz 2 (4x4) 'Magi':", A2);
 disp("Diferença entre a ortogonal e a identidade:", Q2'*Q2 - eye(5, 5));
 disp("Acurácia da decomposição QR:", Q2*R2 - A2);
 
@@ -61,7 +64,7 @@ disp("Matriz 1 Permutada (3x3):", A1*P1);
 disp("Diferença entre a ortogonal e a identidade:", Q1'*Q1 - eye(3, 3));
 disp("Acurácia da decomposição QR:", Q1*R1 - A1*P1);
 
-disp("Matriz 2 Permutada (3x5):", A2*P2);
+disp("Matriz 2 Permutada (4x4) 'Magi':", A2*P2);
 disp("Diferença entre a ortogonal e a identidade:", Q2'*Q2 - eye(5, 5));
 disp("Acurácia da decomposição QR:", Q2*R2 - A2*P2);
 
