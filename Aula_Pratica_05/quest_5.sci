@@ -1,4 +1,5 @@
 clear;
+exec('./funcs/qr_GSM.sci');
 exec("./funcs/espectro.sci");
 
 tol = 10e-8;
