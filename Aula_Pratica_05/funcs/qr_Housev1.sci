@@ -10,10 +10,15 @@ function [U, R] = qr_Housev1(A)
         e(1) = norm(x);
         
         v = x - e;
-        v = v / norm(v);
+        v_norm = norm(v);
+
+        if v_norm ~= 0 then
+            v = v / v_norm;
+        end
+        
         U(i:m, i) = v;
         
         R(i:m, i:n) = R(i:m, i:n) - 2 * v * (v' * R(i:m, i:n));
-
+        
     end
 endfunction
