@@ -7,7 +7,7 @@ function [U, R] = qr_Housev1(A)
         x = R(i:m, i);
         e = zeros(m-i+1, 1);
         
-        if x(1,1) > 0 then
+        if x(1) > 0 then
             e(1) = -norm(x);
         else
             e(1) = norm(x);
@@ -27,5 +27,5 @@ function [U, R] = qr_Housev1(A)
     end
 
     R = triu(R);
-    
+
 endfunction

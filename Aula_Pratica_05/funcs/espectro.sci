@@ -15,4 +15,4 @@ function [S, num_iteracoes] = espectro(A, tol)
         S = new_S;
         num_iteracoes = num_iteracoes + 1;
     end
-end
+endfunction

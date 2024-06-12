@@ -8,10 +8,10 @@ function [U, R] = qr_Housev2(A)
         x = R(i:m, i);
         e = zeros(m-i+1, 1);
 
-        if x(1,1) > 0 then
-            e(1) = -norm(x);
+        if x(1, 1) > 0 then
+            e(1, 1) = -norm(x);
         else
-            e(1) = norm(x);
+            e(1, 1) = norm(x);
         end
 
         v = x - e;
